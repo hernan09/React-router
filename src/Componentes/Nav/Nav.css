@@ -5,6 +5,10 @@
 .navbar-brand{
     color: white !important;
 }
+#loguito{
+    width: 40px;
+    height: 40px;
+}
 
 #subheader{
     width: 100%;

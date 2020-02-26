@@ -22,7 +22,7 @@ class Comp2 extends React.Component {
   render(){
        if(this.state.load== true){
          return(
-          <div class="spinner-border text-primary" role="status">
+          <div class="spinner-grow text-primary" role="status">
           <span class="sr-only">Loading...</span>
         </div>
          )
