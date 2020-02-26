@@ -1,6 +1,9 @@
 import React from 'react';
 import Nav from './Componentes/Nav/Nav'
 import Footer from './Componentes/Footer/Footer'
+
+import './layout.css'
+
 class Layout extends React.Component {
      constructor(props){
          super(props)

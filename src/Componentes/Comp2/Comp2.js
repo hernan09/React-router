@@ -3,27 +3,44 @@ import './comp.css'
 import Image from '../../descarga.jpeg'
 
 class Comp2 extends React.Component {
- 
+    constructor(props){
+      super(props)
+
+       this.state = {
+         load:Boolean = true
+       }
+    }
+
+    componentDidMount() {
+        setTimeout(() => {
+          this.setState({
+            load:false
+          })
+        }, 2000);
+    }
 
   render(){
-      return(
-        <div className="card" style={{width:400,margin:'auto'}}>
-        <img src={Image} className="card-img-top" alt="..."/>
-        <div className="card-body">
-          <h5 className="card-title">Card title</h5>
-          <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+       if(this.state.load== true){
+         return(
+          <div class="spinner-border text-primary" role="status">
+          <span class="sr-only">Loading...</span>
         </div>
-        <ul className="list-group list-group-flush">
-          <li className="list-group-item">Cras justo odio</li>
-          <li className="list-group-item">Dapibus ac facilisis in</li>
-          <li className="list-group-item">Vestibulum at eros</li>
-        </ul>
-        <div className="card-body">
-          <a href="#" className="card-link">Card link</a>
-          <a href="#" className="card-link">Another link</a>
-        </div>
-      </div>
-      )
+         )
+       }else{
+        return(
+          <div className="jumbotron">
+            <blockquote className="text-center">
+            <h1 className="display-4">ABOUT!</h1>
+            <p className="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+            <hr className="my-4"/>
+            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+            <a className="btn btn-primary btn-block" href="#" role="button">Learn more</a>
+            </blockquote>
+           
+          </div>
+        )
+       }
+      
   }
 
 }
