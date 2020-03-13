@@ -27,7 +27,7 @@ class Galery extends React.Component {
   componentDidMount() {
     setTimeout(() => {
       this.setState({
-        load: true
+        load: false
       });
     }, 2000);
   }
