@@ -1,43 +1,62 @@
-.jumbotron{
-    background-color: white !important;
-    max-width: 600px;
-    margin: auto;
-    -webkit-animation: fade-in-left 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	        animation: fade-in-left 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+.jumbotron {
+  position: relative;
+  top: 100px;
+  background: #076585; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #fff,
+    #076585
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #fff,
+    #076585
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  max-width: 600px;
+  margin: auto;
+  -webkit-animation: fade-in-left 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in-left 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  border: none;
 }
-.spinner-grow{
-    position: absolute;
-    left: 0;
-    right: 0;
-    top:35%;
-    width: 300px;
-    height: 300px;
-    margin: auto;
+.spinner-grow {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 35%;
+  width: 300px;
+  height: 300px;
+  margin: auto;
 }
-
+.btn {
+  width: 200px;
+  margin: auto;
+  color: white;
+}
+a {
+  color: white !important;
+}
 
 @-webkit-keyframes fade-in-left {
-    0% {
-      -webkit-transform: translateX(-50px);
-              transform: translateX(-50px);
-      opacity: 0;
-    }
-    100% {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-      opacity: 1;
-    }
+  0% {
+    -webkit-transform: translateX(-50px);
+    transform: translateX(-50px);
+    opacity: 0;
   }
-  @keyframes fade-in-left {
-    0% {
-      -webkit-transform: translateX(-50px);
-              transform: translateX(-50px);
-      opacity: 0;
-    }
-    100% {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-      opacity: 1;
-    }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
   }
-  
+}
+@keyframes fade-in-left {
+  0% {
+    -webkit-transform: translateX(-50px);
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

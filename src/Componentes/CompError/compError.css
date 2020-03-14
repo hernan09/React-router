@@ -1,0 +1,9 @@
+.imagenError {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 31%;
+  margin: auto;
+  width: auto;
+  height: 450px;
+}
