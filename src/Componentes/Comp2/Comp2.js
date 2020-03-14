@@ -4,6 +4,8 @@ import Image from "../../descarga.jpeg";
 import Loading from "react-loading-components";
 
 class Comp2 extends React.Component {
+  _isMounted = false;
+
   constructor(props) {
     super(props);
 
@@ -13,11 +15,16 @@ class Comp2 extends React.Component {
   }
 
   componentDidMount() {
-    setTimeout(() => {
+    this._isMounted = true;
+    if (this._isMounted) {
       this.setState({
         load: false
       });
-    }, 2000);
+    }
+
+  }
+  componentWillUnmount() {
+    this._isMounted = false;
   }
 
   render() {

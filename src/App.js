@@ -7,6 +7,7 @@ import Comp1 from "./Componentes/Comp1/Comp1";
 import Comp2 from "./Componentes/Comp2/Comp2";
 import CompError from "./Componentes/CompError/CompError";
 import Galery from "./Componentes/galery/galery";
+import RickGalery from './Componentes/RickPage/Rick'
 import Layout from "./layout";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route exact path="/home" component={Comp1}></Route>
           <Route exact path="/home/news" component={Comp2}></Route>
           <Route exact path="/home/galery" component={Galery}></Route>
+          <Route exact path="/home/galery/rickandmorty" component={RickGalery}></Route>
           <Route path="/404" component={CompError} />
           <Redirect from="*" to="/404" />
         </Switch>

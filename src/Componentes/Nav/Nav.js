@@ -27,6 +27,9 @@ class Nav extends React.Component {
             <Link className="navbar-brand " to="/home/galery">
               Galery
             </Link>
+            <Link className="navbar-brand " to="/home/galery/rickandmorty">
+              Rick Galery
+            </Link>
           </ul>
         </nav>
         <div id="subheader"></div>
