@@ -35,7 +35,7 @@ class Comp2 extends React.Component {
             type="three_dots"
             width={80}
             height={80}
-            fill="#1F497D"
+            fill="#0A0909"
           ></Loading>
         </div>
       );

@@ -12,11 +12,6 @@ class Nav extends React.Component {
     return (
       <div>
         <nav className="navbar navbar-light bg-light">
-          <span>
-            <Link className="navbar-brand" to="/home">
-              Inicio
-            </Link>
-          </span>
           <ul className="nav justify-content-start ml-auto">
             <Link className="navbar-brand" to="/home">
               Home

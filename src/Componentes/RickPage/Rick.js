@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Loading from "react-loading-components";
 
+import './Rick.css'
 
 class RickGalery extends Component {
   _isMounted = false;
@@ -64,15 +65,18 @@ class RickGalery extends Component {
     })
     return (
       <div className="rickContainer">
-        <button style={{ margin: 10 }} onClick={() => this.fetchcontentNext()} className="btn btn-primary btn-sm">Next</button>
-        {!this.state.loading && ImagenesRickAndMorty}
+        <button style={{ margin: 10 }} onClick={() => this.fetchcontentNext()} className="btn btn-success btn-sm">Next</button>
+        <div className="rick-container-hijo">
+          {!this.state.loading && ImagenesRickAndMorty}
+        </div>
+
 
         {this.state.loading && <div>
           <Loading className="spinner"
             type="three_dots"
             width={80}
             height={80}
-            fill="#1F497D"></Loading>
+            fill="#0A0909"></Loading>
         </div>}
       </div>
     )
