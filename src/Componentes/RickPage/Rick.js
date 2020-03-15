@@ -28,18 +28,28 @@ class RickGalery extends Component {
     this._isMounted = false;
   }
 
-  fetchcontentNext() {
+
+
+  fetchcontentNext(event) {
+    console.log(event)
     this._isMounted = true;
-    fetch(`https://rickandmortyapi.com/api/character?page=${this.state.next || 1}`, { method: 'GET' }).then(resp => resp.json()).then(data => {
+    fetch(`https://rickandmortyapi.com/api/character?page=${this.state.next || 1}`).then(resp => resp.json()).then(data => {
       console.log(data)
 
-      if (this._isMounted || this.state.next < 25) {
+      if (this._isMounted || (this.state.next < 25 && event === 'next')) {
         this.setState({
           objImgs: data.results,
           loading: false,
           next: this.state.next + 1
         })
-      } else {
+      } else if (this._isMounted || (this.state.next < 25 && event === 'back')) {
+        this.setState({
+          objImgs: data.results,
+          loading: false,
+          next: this.state.next - 1
+        })
+      }
+      else {
         this.setState({
           objImgs: data.results,
           loading: false,
@@ -65,7 +75,8 @@ class RickGalery extends Component {
     })
     return (
       <div className="rickContainer">
-        <button style={{ margin: 10 }} onClick={() => this.fetchcontentNext()} className="btn btn-success btn-sm">Next</button>
+        <button style={{ margin: 10 }} onClick={(event) => this.fetchcontentNext('next')} className="btn btn-success btn-sm">Next</button>
+        <button style={{ margin: 10 }} onClick={(event) => this.fetchcontentNext('back')} className="btn2 btn-danger btn-sm">Back</button>
         <div className="rick-container-hijo">
           {!this.state.loading && ImagenesRickAndMorty}
         </div>

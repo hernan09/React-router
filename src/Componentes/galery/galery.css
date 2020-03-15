@@ -29,7 +29,8 @@
   max-width: 350px;
   margin: 10px;
   background-color: transparent;
-  background-image: url(../../walpgame3.jpg);
+  background-image: url(../../load.gif);
+  background-position: center center;
   color: white;
   border: none;
 }

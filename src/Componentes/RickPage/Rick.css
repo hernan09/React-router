@@ -12,8 +12,16 @@
   top: 200px;
   z-index: 9999999999999999;
 }
+.rickContainer > .btn2 {
+  width: 200px;
+  margin: 10px;
+  position: absolute;
+  left: 52px;
+  top: 200px;
+  z-index: 9999999999999999;
+}
 .rick-container-hijo {
-  width: 100%;
+  width: 90%;
   margin: auto;
   height: 100vh;
   display: flex;
