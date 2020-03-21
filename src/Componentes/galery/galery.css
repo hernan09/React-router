@@ -51,8 +51,14 @@
 .card:hover .card-body {
   display: block;
   z-index: 999999999999;
+  opacity: 1;
   cursor: pointer;
-  transform: translateY(10px);
+
+  transition: all ease 1s;
+}
+.card:hover {
+  transform: translateY(-10px);
+  cursor: pointer;
   transition: all ease 1s;
 }
 .spinner {

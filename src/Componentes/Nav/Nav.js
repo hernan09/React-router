@@ -8,10 +8,19 @@ class Nav extends React.Component {
     super(props);
   }
 
+
+
+  logout() {
+    if (localStorage.getItem('loguedPass') === true || localStorage.getItem('loguedPass') === null)
+      console.log('asdsdas')
+    localStorage.clear()
+    window.location.reload()
+  }
   render() {
     return (
       <div>
         <nav className="navbar navbar-light bg-light">
+          <button className="btn btn-light btn-sm" onClick={this.logout}>Logout</button>
           <ul className="nav justify-content-start ml-auto">
             <Link className="navbar-brand" to="/home">
               Home

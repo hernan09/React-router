@@ -33,33 +33,36 @@ class RickGalery extends Component {
   fetchcontentNext(event) {
     console.log(event)
     this._isMounted = true;
-    fetch(`https://rickandmortyapi.com/api/character?page=${this.state.next || 1}`).then(resp => resp.json()).then(data => {
-      console.log(data)
+    setTimeout(() => {
+      fetch(`https://rickandmortyapi.com/api/character?page=${this.state.next || 1}`).then(resp => resp.json()).then(data => {
+        console.log(data)
 
-      if (this._isMounted || (this.state.next < 25 && event === 'next')) {
-        this.setState({
-          objImgs: data.results,
-          loading: false,
-          next: this.state.next + 1
-        })
-      } else if (this._isMounted || (this.state.next < 25 && event === 'back')) {
-        this.setState({
-          objImgs: data.results,
-          loading: false,
-          next: this.state.next - 1
-        })
-      }
-      else {
-        this.setState({
-          objImgs: data.results,
-          loading: false,
-          next: this.state.next
-        })
-      }
+        if (this._isMounted || (this.state.next < 25 && event === 'next')) {
+          this.setState({
+            objImgs: data.results,
+            loading: false,
+            next: this.state.next + 1
+          })
+        } else if (this._isMounted || (this.state.next < 25 && event === 'back')) {
+          this.setState({
+            objImgs: data.results,
+            loading: false,
+            next: this.state.next - 1
+          })
+        }
+        else {
+          this.setState({
+            objImgs: data.results,
+            loading: false,
+            next: this.state.next
+          })
+        }
 
-    }).catch(error => {
-      console.log('acaba de pasar el error aca', error)
-    })
+      }).catch(error => {
+        console.log('acaba de pasar el error aca', error)
+      })
+    }, 2000)
+
   }
 
   render() {
@@ -79,16 +82,14 @@ class RickGalery extends Component {
         <button style={{ margin: 10 }} onClick={(event) => this.fetchcontentNext('back')} className="btn2 btn-danger btn-sm">Back</button>
         <div className="rick-container-hijo">
           {!this.state.loading && ImagenesRickAndMorty}
+          {this.state.loading && <div>
+            <Loading className="spinner"
+              type="three_dots"
+              width={80}
+              height={80}
+              fill="#0A0909"></Loading>
+          </div>}
         </div>
-
-
-        {this.state.loading && <div>
-          <Loading className="spinner"
-            type="three_dots"
-            width={80}
-            height={80}
-            fill="#0A0909"></Loading>
-        </div>}
       </div>
     )
   }
