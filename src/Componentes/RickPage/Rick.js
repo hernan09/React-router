@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Loading from "react-loading-components";
-
+import { Link } from "react-router-dom";
 import './Rick.css'
 
 class RickGalery extends Component {
@@ -64,14 +64,19 @@ class RickGalery extends Component {
     }, 2000)
 
   }
+  goToBoard = (item) => {
+    this.props.history.push(`/home/galery/rickandmorty/${item.id}`, { item: item });
+  }
 
   render() {
+
     const ImagenesRickAndMorty = this.state.objImgs.map((item, index) => {
       return (
         <div key={index} className="card">
           <img src={item.image} className="card-img-top" alt="..." />
           <div className="card-body">
             <p className="card-text">{item.name}</p>
+            <button className="btn btn-outline-primary btn-sm" onClick={() => this.goToBoard(item)}>View Details</button>
           </div>
         </div>
       )

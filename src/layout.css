@@ -22,6 +22,7 @@ body {
   top: 100px;
   color: black;
   padding: 15px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .spanLetraG {
   color: red;
@@ -34,4 +35,9 @@ body {
 }
 .spanLetraN {
   color: cornflowerblue;
+}
+.googleBtn > h1 {
+  background: linear-gradient(black, white);
+  -webkit-background-clip: text;
+  color: transparent;
 }

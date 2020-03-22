@@ -58,7 +58,7 @@ class Galery extends React.Component {
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
                   </p>
-                  <a href="#" className="btn btn-danger">
+                  <a href="#" className="btn btn-outline-danger">
                     Go somewhere
                   </a>
                 </div>
@@ -76,7 +76,7 @@ class Galery extends React.Component {
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
                   </p>
-                  <a href="#" className="btn btn-primary">
+                  <a href="#" className="btn btn-outline-primary">
                     Go somewhere
                   </a>
                 </div>
@@ -94,7 +94,7 @@ class Galery extends React.Component {
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
                   </p>
-                  <a href="#" className="btn btn-danger">
+                  <a href="#" className="btn btn-outline-danger">
                     Go somewhere
                   </a>
                 </div>

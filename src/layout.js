@@ -15,7 +15,7 @@ class Layout extends React.Component {
       logued: false,
       email: ''
     }
-    console.log(this.props.children);
+
   }
 
 
@@ -43,7 +43,7 @@ class Layout extends React.Component {
       return (
         <div className="container-google">
           <div className="googleBtn">
-            <h1><span className="spanLetraG">G</span>mai<span className="spanLetraL">l</span> <span className="spanLetraL2">L</span>ogi<span className="spanLetraN">n</span></h1>
+            <h1><strong><span className="spanLetraG">G</span>mai<span className="spanLetraL">l</span> <span className="spanLetraL2">L</span>ogi<span className="spanLetraN">n</span></strong></h1>
             <hr></hr>
             <GoogleLogin className="buttonGogle"
               clientId="681263197699-nrrcm6bdv930gjvmheda29j8nts5r0u4.apps.googleusercontent.com"
