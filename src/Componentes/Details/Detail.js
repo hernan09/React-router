@@ -14,7 +14,7 @@ class Details extends Component {
   }
 
   componentDidMount() {
-    fetch(`https://rickandmortyapi.com/api/character`).then(data => data.json()).then(resp => {
+    fetch(`https://rickandmortyapi.com/api/character?page=${localStorage.getItem('pagina') || 1}`).then(data => data.json()).then(resp => {
       this.setState({
         arrayResp: resp.results
       })

@@ -43,12 +43,7 @@ class RickGalery extends Component {
             loading: false,
             next: this.state.next + 1
           })
-        } else if (this._isMounted || (this.state.next < 25 && event === 'back')) {
-          this.setState({
-            objImgs: data.results,
-            loading: false,
-            next: this.state.next - 1
-          })
+
         }
         else {
           this.setState({
@@ -62,6 +57,8 @@ class RickGalery extends Component {
         console.log('acaba de pasar el error aca', error)
       })
     }, 2000)
+
+    localStorage.setItem('pagina', this.state.next)
 
   }
   goToBoard = (item) => {
