@@ -43,7 +43,7 @@ class Comp1 extends React.Component {
               It uses utility classes for typography and spacing to space
               content out within the larger container.
             </p>
-            <a className="btn btn-warning btn-block" href="#" role="button">
+            <a className="btn btn-primary btn-block" href="#" role="button">
               Learn more
             </a>
           </blockquote>

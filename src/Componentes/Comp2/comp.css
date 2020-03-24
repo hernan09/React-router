@@ -1,6 +1,11 @@
 .jumbotron {
-  background-color: white !important;
+  background-color: transparent !important;
+  color: white;
   max-width: 600px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 30%;
   margin: auto;
   -webkit-animation: fade-in-left 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   animation: fade-in-left 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;

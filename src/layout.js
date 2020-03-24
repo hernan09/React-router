@@ -42,6 +42,11 @@ class Layout extends React.Component {
     if (localStorage.getItem('loguedPass') === false || localStorage.getItem('loguedPass') === null) {
       return (
         <div className="container-google">
+          <div class="thumb">
+            <a href="#">
+              <span>Login whit Google acount</span>
+            </a>
+          </div>
           <div className="googleBtn">
             <h1><strong><span className="spanLetraG">G</span>mai<span className="spanLetraL">l</span> <span className="spanLetraL2">L</span>ogi<span className="spanLetraN">n</span></strong></h1>
             <hr></hr>
