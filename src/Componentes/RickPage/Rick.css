@@ -21,9 +21,35 @@
   z-index: 9999999999999999;
 }
 .rick-container-hijo {
+  position: relative;
   width: 90%;
   margin: auto;
   height: 100vh;
   display: flex;
   flex-flow: wrap;
+  top: 10%;
+}
+
+.aside {
+  widows: auto;
+  max-width: 400px;
+  padding: 10px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  background-image: url(../../logoanimado.gif);
+  background-position: center center;
+  background-size: cover;
+  color: gray;
+  position: fixed;
+  right: 40%;
+  z-index: 111111111111111111;
+  box-shadow: 3px 3px 3px 3px white;
+  border-radius: 2%;
+  filter: sepia(60%);
+}
+.aside > .btn {
+  width: 200px;
+  margin: auto;
+  margin-top: 10px;
 }

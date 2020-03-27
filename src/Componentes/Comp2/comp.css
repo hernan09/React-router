@@ -5,10 +5,19 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 30%;
+  top: 40%;
   margin: auto;
+  font-family: Arial, Helvetica, sans-serif;
   -webkit-animation: fade-in-left 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   animation: fade-in-left 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+.jumbotron > blockquote > .btn {
+  width: 200px !important;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 95%;
 }
 .spinner-grow {
   position: absolute;

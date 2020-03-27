@@ -80,9 +80,16 @@ class RickGalery extends Component {
     })
     return (
       <div className="rickContainer">
-        <button style={{ margin: 10 }} onClick={(event) => this.fetchcontentNext('next')} className="btn btn-success btn-sm">Next</button>
-        <button style={{ margin: 10 }} onClick={(event) => this.fetchcontentNext('back')} className="btn2 btn-danger btn-sm">Back</button>
+        <button style={{ margin: 10 }} onClick={(event) => this.fetchcontentNext('next')} className="btn btn-outline-light btn-sm">Next</button>
+        {/* <button style={{ margin: 10 }} onClick={(event) => this.fetchcontentNext('back')} className="btn2 btn-outline-light btn-sm">Back</button> */}
         <div className="rick-container-hijo">
+          <div className="aside">
+            <h3>Hello is this aside</h3>
+            <p> asdasda lorem i sim and toem esoasdasda asdasdasdasd iuoiyot hualsh aas  u8yqi hjkashdajklsh  klasjdalksja aklsalsk asdasdasd fdgdfgdg twrtasdagb
+               adawasdasdasd hdgfdffg  asdasdasd dfgdf awasda dfgdf d gas aasd as we qweqweq asdasdasda
+            </p>
+            <button className="btn btn-success btn-sm">View More</button>
+          </div>
           {!this.state.loading && ImagenesRickAndMorty}
           {this.state.loading && <div>
             <Loading className="spinner"

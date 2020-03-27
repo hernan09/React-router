@@ -1,9 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Particles from 'react-particles-js';
+import ReactPlayer from 'react-player'
 import "./Nav.css";
-import logo from "../../logoo.png";
+import logo from "../../logoanimado2.gif";
+import VideoPlanet from '../../nombre.mp4'
 import Raptor from '../../velociraptor.png'
+
 
 class Nav extends React.Component {
   constructor(props) {
@@ -39,7 +42,8 @@ class Nav extends React.Component {
           </ul>
         </nav>
         <div id="subheader">
-          <div id="logoSubheader"><h2>Rincon del Raptor</h2></div>
+          <div id="logoSubheader"><h2>El Rincon Del Raptor</h2></div>
+
           <Particles height={200} ></Particles>
         </div>
       </div>
